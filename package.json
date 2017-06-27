@@ -1,10 +1,11 @@
 {
   "name": "statusphere",
   "version": "0.0.0",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
