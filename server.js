@@ -11,7 +11,10 @@ const api = require('./server/routes/api');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/myappdatabase');
+
+mongo_url = process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME;
+
+mongoose.connect(mongo_url);
 
 // Parsers for POST data
 app.use(bodyParser.json());
